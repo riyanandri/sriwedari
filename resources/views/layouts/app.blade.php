@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
     @livewireStyles
 </head>
 <body>
@@ -77,8 +77,8 @@
         </main>
     </div>
 
-    <link href="{{ asset('assets/js/bootstrap.bundle.min.js') }}">
-    <link href="{{ asset('assets/js/jquery-3.6.0.min.js') }}">
+    <link href="{{ asset('assets/js/app.bundle.min.js') }}">
+    <link href="{{ asset('assets/js/jquery.min.js') }}">
     @livewireScripts
 </body>
 </html>

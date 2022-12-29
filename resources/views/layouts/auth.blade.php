@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -14,34 +14,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset('admin/vendor/jqvmap/dist/jqvmap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/vendor/summernote/dist/summernote-bs4.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/vendor/owl.carousel/dist/assets/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin/vendor/owl.carousel/dist/assets/owl.theme.default.min.css') }}">
-
     @stack('css')
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('admin//css/components.css') }}">
-    @livewireStyles
+    <link rel="stylesheet" href="{{ asset('admin/css/components.css') }}">
 </head>
+
 <body>
     <div id="app">
-        <div class="main-wrapper">
-            @include('layouts.admin.navbar')
-            @include('layouts.admin.sidebar')
-
-            <!-- Main Content -->
-            <div class="main-content">
-                @yield('content')
-            </div>
-            @include('layouts.admin.footer')
-        </div>
+        @yield('content')
     </div>
-
-    <link href="{{ asset('assets/js/bootstrap.bundle.min.js') }}">
-    <link href="{{ asset('assets/js/jquery-3.6.0.min.js') }}">
 
     <!-- General JS Scripts -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
@@ -51,22 +34,12 @@
     <script src="{{ asset('assets/js/moment.min.js') }}"></script>
     <script src="{{ asset('admin/js/stisla.js') }}"></script>
 
-    @stack('js')
-
     <!-- JS Libraies -->
-    <script src="{{ asset('admin/vendor/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/chart.js/dist/Chart.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/summernote/dist/summernote-bs4.js') }}"></script>
-    <script src="{{ asset('admin/vendor/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
-    {{-- <script src="{{ asset('admin/js/page/modules-ion-icons.js') }}"></script> --}}
-
+    @stack('js')
     <!-- Template JS File -->
     <script src="{{ asset('admin/js/scripts.js') }}"></script>
     <script src="{{ asset('admin/js/custom.js') }}"></script>
 
     <!-- Page Specific JS File -->
-    <script src="{{ asset('admin/js/page/index.js') }}"></script>
-    @livewireScripts
 </body>
 </html>
